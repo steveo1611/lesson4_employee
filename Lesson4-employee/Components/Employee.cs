@@ -11,11 +11,33 @@ namespace Lesson4_employee.Components
     public String Technology { get; set; }
 
 
-        public Employee(int id, string name, string technology)
+        public Employee(string name, string technology)
         {
-            Id = id;
+            Id++;
             Name = name;
             Technology = technology;
         }
+/*
+        public string EmployeeAdd()
+        {
+
+            Console.WriteLine("case1");
+        }
+        public string EmployeeEdit()
+        {
+            Console.WriteLine("Case2");
+
+        }
+        public string EmployeeDelete()
+        {
+            Console.WriteLine("case3");
+
+        }
+        public string EmployeeList()
+        {
+            Console.WriteLine("Case4");
+        }
+*/
+
     }
 }

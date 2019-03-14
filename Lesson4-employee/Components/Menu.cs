@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Lesson4_employee.Components;
+
 
 namespace Lesson4_employee.Components
 {
     public class Menu
     {
-    string mainChoice = "";
+    string menuChoice = "";
             
     public void OpenMenu()
         {
@@ -19,16 +21,18 @@ namespace Lesson4_employee.Components
         5:  Exit Application
         ");
 
-        mainChoice = Console.ReadLine();
+        menuChoice = Console.ReadLine();
 
 
             // Need to take input and check if it's 1-5 then send to next step.  If not, give message back about not being a valid choice
             // can I use a case select to check for number? (is this best option???)
 
-            switch (mainChoice)
+            switch (menuChoice)
             {
                 case "1":
-                    Console.WriteLine("case1");
+                    //Console.WriteLine("case1");
+                    Console.Clear();
+                    AddEmployeeInfo();
                     break;
 
                 case "2":
@@ -51,14 +55,25 @@ namespace Lesson4_employee.Components
                     Console.WriteLine("the end");
                     break;
             }
-  //      Console.WriteLine(mainChoice);
+  //      Console.WriteLine(menuChoice);
             Console.ReadLine();
 
         }
         public void AddEmployeeInfo()
         {
+            Console.WriteLine("Hello, please enter the Employee's name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello, please enter the Employee's technology:");
+            string tech = Console.ReadLine();
+            Employee employee = new Employee(name, tech);
+            Console.Clear();
+            Console.WriteLine("Employee's ID is: " + employee.Id);
+            Console.WriteLine("Employee's name: " + employee.Name);
+            Console.WriteLine("Employee's Technology is: " + employee.Technology);
 
-
+            Console.WriteLine("Please type any key to go back to menu");
+            Console.ReadKey();
+            OpenMenu();
 
         }
     }
