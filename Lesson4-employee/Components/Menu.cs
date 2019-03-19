@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Lesson4_employee.Components;
+using Lesson4_employee;
 
 
 namespace Lesson4_employee.Components
@@ -32,11 +32,12 @@ namespace Lesson4_employee.Components
                 case "1":
                     //Console.WriteLine("case1");
                     Console.Clear();
-                    AddEmployeeInfo();
+                    Lesson4_employee.employee.AddEmployeeInfo();
                     break;
 
                 case "2":
                     Console.WriteLine("Case2");
+                    EditEmployeeInfo();
                     break;
 
                 case "3":
@@ -59,8 +60,10 @@ namespace Lesson4_employee.Components
             Console.ReadLine();
 
         }
+        /*
         public void AddEmployeeInfo()
         {
+
             Console.WriteLine("Hello, please enter the Employee's name:");
             string name = Console.ReadLine();
             Console.WriteLine("Hello, please enter the Employee's technology:");
@@ -76,5 +79,16 @@ namespace Lesson4_employee.Components
             OpenMenu();
 
         }
+        */
+        public void EditEmployeeInfo()
+        {
+            // check to make sure there is info available to be edited 
+            Console.WriteLine("test #2");
+        //   Console.WriteLine(Lesson4_employee.Id);
+
+
+        }
+
+
     }
 }

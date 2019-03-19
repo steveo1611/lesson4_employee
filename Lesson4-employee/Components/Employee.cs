@@ -6,38 +6,28 @@ namespace Lesson4_employee.Components
 {
     class Employee
     {
-    public int Id { get; set; }
-    public String Name { get; set; }
-    public String Technology { get; set; }
+        public int Id { get; set; }
+        public String Name { get; set; }
+        public String Technology { get; set; }
 
 
-        public Employee(string name, string technology)
+        //private Employee(string name, string technology)
+        public Employee()
         {
             Id++;
             Name = name;
             Technology = technology;
         }
-/*
-        public string EmployeeAdd()
+        public void AddEmployeeInfo()
         {
-
-            Console.WriteLine("case1");
-        }
-        public string EmployeeEdit()
-        {
-            Console.WriteLine("Case2");
-
-        }
-        public string EmployeeDelete()
-        {
-            Console.WriteLine("case3");
+            Console.WriteLine("Hello, please enter the Employee's name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hello, please enter the Employee's technology:");
+            string technology = Console.ReadLine();
+            //          Employee employee = new Employee(name, tech);
+            Console.ReadKey();
 
         }
-        public string EmployeeList()
-        {
-            Console.WriteLine("Case4");
-        }
-*/
 
     }
 }

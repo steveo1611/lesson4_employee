@@ -14,10 +14,12 @@ namespace Lesson4_employee
         static void Main(string[] args)
         {
           
-            Console.WriteLine("Hello Heaven!");
-          Menu menu = new Menu();
-            menu.OpenMenu();
-             
+             Console.WriteLine("Hello Heaven!");
+             Menu menu = new Menu();
+             menu.OpenMenu();
+
+             Employee employee = new Employee();
+
         }
 
     }
