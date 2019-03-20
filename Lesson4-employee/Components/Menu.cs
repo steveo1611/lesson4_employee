@@ -44,6 +44,7 @@ namespace Lesson4_employee.Components
 
                 case "3":
                     employee.DeleteEmployeeInfo();
+                    OpenMenu();
                     break;
 
                 case "4":
@@ -51,7 +52,8 @@ namespace Lesson4_employee.Components
                     break;
 
                 default:
-                    Console.WriteLine("the end");
+                    Console.WriteLine("That is not a valid option, please select from the menu:");
+                    OpenMenu();
                     break;
             }
         }
