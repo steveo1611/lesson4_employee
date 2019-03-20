@@ -10,22 +10,45 @@ namespace Lesson4_employee.Components
         public String Name { get; set; }
         public String Technology { get; set; }
 
-
-        //private Employee(string name, string technology)
-        public Employee()
+        public Employee(string name, string technology)
         {
             Id++;
             Name = name;
             Technology = technology;
         }
+
         public void AddEmployeeInfo()
         {
             Console.WriteLine("Hello, please enter the Employee's name:");
-            string name = Console.ReadLine();
+            Name = Console.ReadLine();
             Console.WriteLine("Hello, please enter the Employee's technology:");
-            string technology = Console.ReadLine();
-            //          Employee employee = new Employee(name, tech);
+            Technology = Console.ReadLine();
+            Console.WriteLine("Employee's ID is: " + Id);
+            Console.WriteLine("Employee's name: " + Name);
+            Console.WriteLine("Employee's Technology is: " + Technology);
+            Console.WriteLine("Please type any key to go back to menu");
             Console.ReadKey();
+
+
+        }
+        public void EditEmployeeInfo()
+        {
+            Console.WriteLine("Employee's ID is: " + Id);
+            Console.WriteLine("Employee's name: " + Name);
+            Console.WriteLine("Employee's Technology is: " + Technology);
+            Console.ReadKey();
+
+        }
+
+        public void DisplayEmployeeInfo()
+        {
+            Console.WriteLine("Display the Employee Info");
+
+        }
+
+        public void DeleteEmployeeInfo()
+        {
+            Console.WriteLine("Delete Employee Info");
 
         }
 

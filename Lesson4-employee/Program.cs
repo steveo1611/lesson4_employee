@@ -15,10 +15,9 @@ namespace Lesson4_employee
         {
           
              Console.WriteLine("Hello Heaven!");
+             
              Menu menu = new Menu();
-             menu.OpenMenu();
-
-             Employee employee = new Employee();
+             menu.CreateUser();
 
         }
 
